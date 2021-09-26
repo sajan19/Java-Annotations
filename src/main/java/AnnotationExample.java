@@ -1,6 +1,9 @@
 import java.lang.annotation.*;
 import java.lang.invoke.MethodHandleInfo;
 import java.lang.reflect.Method;
+/*
+Create Custom Annotations in Java
+ */
 @Documented
 @Target(ElementType.METHOD)
 @Inherited
@@ -11,6 +14,7 @@ import java.lang.reflect.Method;
     int revision() default 1;
     String comments();
 }
+//Class Annotation Example
 public class AnnotationExample {
     @Override
     @MethodInfo(author = "Sajan", comments = "Main method", date = "Sep 25 2021", revision = 1)
@@ -22,8 +26,9 @@ public class AnnotationExample {
     public static void oldMethod(){
         System.out.println("old method, don't use it.");
     }
-
+    //Driver Main Class
     public static void main(String[] args) {
+        //Try-Catch Block to catch Exceptions
         try {
             for (Method method : AnnotationExample.class.getMethods()){
                 //check if MethodInfo annotations is present for the method
