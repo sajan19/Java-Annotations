@@ -40,7 +40,7 @@ public class OpenCSVReader {
             CSVReader csvReader = new CSVReader(reader);
             //Create a List to read All Records
             List<String[]> records = csvReader.readAll();
-            System.out.println("[name roll_No. department result cgpa]");
+            System.out.println("[name roll_num department result cgpa]");
             //Make use of For Each loop
             for (String[] record : records) {
                 System.out.println(Arrays.toString(record));
