@@ -11,7 +11,7 @@ import java.util.List;
 
 public class OpenCSVWriter {
     //Static Variable to provide file Path
-    private static final String SAMPLE_CSV_FILE_PATH = "C:\\Users\\Sajan\\Desktop\\Annotations\\src\\main\\java\\sample.csv";
+    private static final String SAMPLE_CSV_FILE_PATH = "C:\\Users\\Sajan\\Desktop\\Annotations\\src\\main\\resources\\sample.csv";
     //Driver Main Method
     public static void main(String[] args) throws Exception{
 //        String csv = "data.csv";
@@ -21,6 +21,8 @@ public class OpenCSVWriter {
         List<MyUser> myUsers = new ArrayList<>();
         myUsers.add(new MyUser("sajan","176","extc","pass","8.95"));
         myUsers.add(new MyUser("rudra","17","csc","pass","7.35"));
+        myUsers.add(new MyUser("ronak","137","ec","pass","5.95"));
+        myUsers.add(new MyUser("raj","114","civil","pass","9.3"));
         beanToCsv.write(myUsers);
         System.out.println("Entries have being Successfully Added in CSV file");
         //Create record
